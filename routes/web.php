@@ -2,11 +2,14 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PostController;
 
-Route::get('/home2', [HomeController::class, 'index']);
+// Route::get('/home2', [HomeController::class, 'index']);
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
 Route::get('/', function () {
     return view('welcome');
 });
+Route::resource('posts', PostController::class);
 // //1
 // Route::get('/mahasiswa/{nama}', function ($nama) {
 //     return "Nama Mahasiswa : ". $nama;

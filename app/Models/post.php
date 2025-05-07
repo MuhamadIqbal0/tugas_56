@@ -1,10 +1,13 @@
 <?php
 
-namespace App\models;
+namespace App\Models;
 
-use Illuminate\Database\Models;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class post extends Models{
+class post extends Model
+{
     use HasFactory;
-    protected $fillable = ['title', 'content'];
+
+    protected $fillable = ['title', 'description', 'image'];
 }
